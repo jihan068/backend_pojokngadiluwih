@@ -1,0 +1,81 @@
+### ========== TES UMKM ==========
+
+### 1. GET semua UMKM
+GET http://localhost:3000/umkm
+
+### 1. GET UMKM by ID
+GET http://localhost:3000/umkm/5
+
+### 2. POST tambah UMKM
+POST http://localhost:3000/umkm
+Content-Type: application/json
+
+{
+    "user_id": 2,
+    "nama_produk": "Bumbu Pecel Kacang",
+    "jumlah": 10,
+    "harga": 25000
+}
+
+### 3. POST tambah UMKM (Data ke-2)
+POST http://localhost:3000/umkm
+Content-Type: application/json
+
+{
+    "user_id": 2,
+    "nama_produk": "Bibit cabai",
+    "jumlah": 5,
+    "harga": 5000
+}
+
+### 4. PUT ubah UMKM (Asumsi ID yang diubah adalah 1)
+PUT http://localhost:3000/umkm/1
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "nama_produk": "Bumbu Pecel Kacang",
+    "jumlah": 15,
+    "harga": 10000
+}
+
+### 5. DELETE hapus UMKM (Asumsi ID yang dihapus adalah 2)
+DELETE http://localhost:3000/umkm/2
+
+
+### ========== TES BERITA ==========
+
+### 1. GET semua Berita
+GET http://localhost:3000/berita
+
+GET http://localhost:3000/berita/1
+
+### 2. POST tambah Berita
+POST http://localhost:3000/berita
+Content-Type: application/json
+
+{
+    "admin_id": 1,
+    "kategori": "Sosial",
+    "penerbit": "Bernanda Februari",
+    "judul_berita": "Karnaval Sound Horeg di Kediri",
+    "konten": "Polres Kediri membubarkan karnaval sound horeg di Desa Duwet setelah warga mengeluh. Pembubaran dilakukan karena melanggar kesepakatan pengaturan suara.",
+    "gambar_thumbnail": "horeg1.jpg",
+    "tanggal_terbit": "2026-10-25"
+}
+
+### 3. PUT ubah Berita (Mengubah Berita ID 1)
+PUT http://localhost:3000/berita/1
+Content-Type: application/json
+
+{
+    "kategori": "Sosial",
+    "penerbit": "Bernanda Februari",
+    "judul_berita": "Karnaval Sound Horeg di Kediri",
+    "konten": "Polres Kediri membubarkan karnaval sound horeg di Desa Duwet setelah warga mengeluh. Pembubaran dilakukan karena melanggar kesepakatan pengaturan suara.",
+    "gambar_thumbnail": "horeg.jpg",
+    "tanggal_terbit": "2026-11-02"
+}
+
+### 4. DELETE hapus Berita (Mengubah Berita ID 1)
+DELETE http://localhost:3000/berita/1
